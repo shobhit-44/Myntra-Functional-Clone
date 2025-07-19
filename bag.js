@@ -1,3 +1,5 @@
+console.log("✅ bag.js loaded successfully");
+
 const CONVENIENCE_FEES = 99;
 let bagItemObjects;
 onLoad();
@@ -20,31 +22,32 @@ function displayBagSummary() {
   });
 
   let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+  
 
   bagSummaryElement.innerHTML = `
     <div class="bag-details-container">
-      <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
-      <div class="price-item">
-        <span class="price-item-tag">Total MRP</span>
-        <span class="price-item-value">₹${totalMRP}</span>
-      </div>
-      <div class="price-item">
-        <span class="price-item-tag">Discount on MRP</span>
-        <span class="price-item-value priceDetail-base-discount">-₹${totalDiscount}</span>
-      </div>
-      <div class="price-item">
-        <span class="price-item-tag">Convenience Fee</span>
-        <span class="price-item-value">₹99</span>
-      </div>
-      <hr>
-      <div class="price-footer">
-        <span class="price-item-tag">Total Amount</span>
-        <span class="price-item-value">₹${finalPayment}</span>
-      </div>
+    <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
+    <div class="price-item">
+      <span class="price-item-tag">Total MRP</span>
+      <span class="price-item-value">₹${totalMRP}</span>
     </div>
-    <button class="btn-place-order">
-      <div class="css-xjhrni">PLACE ORDER</div>
-    </button>
+    <div class="price-item">
+      <span class="price-item-tag">Discount on MRP</span>
+      <span class="price-item-value priceDetail-base-discount">-₹${totalDiscount}</span>
+    </div>
+    <div class="price-item">
+      <span class="price-item-tag">Convenience Fee</span>
+      <span class="price-item-value">₹99</span>
+    </div>
+    <hr>
+    <div class="price-footer">
+      <span class="price-item-tag">Total Amount</span>
+      <span class="price-item-value">₹${finalPayment}</span>
+    </div>
+  </div>
+  <button class="btn-place-order">
+    <div class="css-xjhrni">PLACE ORDER</div>
+  </button>
   `;
 }
 
@@ -53,14 +56,15 @@ function loadBagItemObjects() {
 
   bagItemObjects = bagItems
     .map(itemId => items.find(item => item.id == itemId))
-    .filter(item => item !== undefined);
+    .filter(item => item !== undefined);  // ✅ Remove undefined items
 
   console.log("Loaded bagItemObjects:", bagItemObjects);
 }
 
+
 function displayBagItems() {
   let containerElement = document.querySelector('.bag-items-container');
-
+  
   if (bagItemObjects.length === 0) {
     containerElement.innerHTML = `<h2>Your bag is empty.</h2>`;
     document.querySelector('.bag-summary').innerHTML = '';
@@ -75,6 +79,7 @@ function displayBagItems() {
   containerElement.innerHTML = innerHTML;
 }
 
+
 function removeFromBag(itemId) {
   bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
   localStorage.setItem('bagItems', JSON.stringify(bagItems));
@@ -87,7 +92,7 @@ function removeFromBag(itemId) {
 function generateItemHTML(item) {
   return `<div class="bag-item-container">
     <div class="item-left-part">
-      <img class="bag-item-img" src="images/${item.image}" alt="${item.item_name}">
+      <img class="bag-item-img" src="../${item.image}">
     </div>
     <div class="item-right-part">
       <div class="company">${item.company}</div>
@@ -112,7 +117,7 @@ function generateItemHTML(item) {
 
 function handlePlaceOrder() {
   alert("✅ Order placed successfully!");
-  localStorage.removeItem('bagItems');
+  localStorage.removeItem('bagItems'); 
   window.location.href = "index.html";
 }
 
@@ -122,4 +127,3 @@ document.addEventListener("DOMContentLoaded", () => {
     placeOrderBtn.addEventListener("click", handlePlaceOrder);
   }
 });
-
