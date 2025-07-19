@@ -1,5 +1,3 @@
-console.log("✅ bag.js loaded successfully");
-
 const CONVENIENCE_FEES = 99;
 let bagItemObjects;
 onLoad();
@@ -92,7 +90,7 @@ function removeFromBag(itemId) {
 function generateItemHTML(item) {
   return `<div class="bag-item-container">
     <div class="item-left-part">
-    <img class="bag-item-img" src="../${item.images}">
+ <img class="bag-item-img" src="images/${item.image}">
     </div>
     <div class="item-right-part">
       <div class="company">${item.company}</div>
