@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Profile - Myntra Clone</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="bag.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <style>
+    .profile-page {
+      width: 75%;
+      margin: 40px auto;
+      font-size: 15px;
+      color: #282c3f;
+    }
+
+    .profile-section {
+      background-color: #fff;
+      border: 1px solid #eaeaec;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .profile-section h2 {
+      margin-bottom: 15px;
+      color: #ff3f6c;
+      font-size: 18px;
+    }
+
+    .profile-detail {
+      margin: 5px 0;
+    }
+
+    .logout-btn {
+      background-color: #ff3f6c;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo_container">
+      <a href="index.html"><img class="myntra_home" src="myntra_logo.webp" alt="Myntra Home"></a>
+    </div>
+   <nav class="nav_bar">
+  <a href="index.html">Home</a>
+  <a href="#">Men</a>
+  <a href="#">Women</a>
+  <a href="#">Kids</a>
+  <a href="#">Home & Living</a>
+  <a href="#">Beauty</a>
+  <a href="#">Studio <sup>New</sup></a>
+</nav>
+
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">search</span>
+      <input class="search_input" placeholder="Search for products, brands and more">
+    </div>
+    <div class="action_bar">
+      <a href="profile.html" style="text-decoration: none; color: inherit;">
+        <div class="action_container">
+          <span class="material-symbols-outlined action_icon">person</span>
+          <span class="action_name">Profile</span>
+        </div>
+      </a>
+     <a href="wishlist.html" style="text-decoration: none; color: inherit;">
+  <div class="action_container">
+    <span class="material-symbols-outlined action_icon">favorite</span>
+    <span class="action_name">Wishlist</span>
+  </div>
+</a>
+
+     <a href="bag.html" style="text-decoration: none; color: inherit;">
+  <div class="action_container">
+    <span class="material-symbols-outlined action_icon">shopping_bag</span>
+    <span class="action_name">Bag</span>
+    <span class="bag-item-count">0</span>
+  </div>
+</a>
+
+  </header>
+
+  <!-- ✅ Profile content -->
+  <main>
+    <div class="profile-page">
+
+      <!-- Section 1: My Account -->
+      <div class="profile-section">
+        <h2>My Account</h2>
+        <p class="profile-detail">Name: <strong>Shobhit Kumar</strong></p>
+        <p class="profile-detail">Email: <strong>shobhitkumar@gmail.com</strong></p>
+        <p class="profile-detail">Mobile: <strong>+91 9117343069</strong></p>
+      </div>
+
+      <!-- Section 2: Saved Address -->
+      <div class="profile-section">
+        <h2>Saved Addresses</h2>
+        <p class="profile-detail">Home: Damodarpur, Kanti, Muzaffarpur - 843113</p>
+      </div>
+
+      <!-- Section 3: My Orders -->
+      <div class="profile-section">
+        <h2>My Orders</h2>
+        <p class="profile-detail">
+             company: 'Nivea',,<br>
+             item_name: 'Men Fresh Deodrant 150ml'<br>
+             price: 285,</p>
+          </div>
+
+      <!-- Section 4: Saved Cards -->
+      <div class="profile-section">
+        <h2>Saved Cards</h2>
+        <p class="profile-detail">SBI Global Credit Card <br>
+            card Details: XXXXXXXX5674 <br>
+            CVV: 1234 </p>
+      </div>
+
+      <!-- Section 5: Logout -->
+      <div class="profile-section">
+        <h2>Logout</h2>
+        <button class="logout-btn" onclick="alert('You have been logged out.')">Logout</button>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+  <div class="footer_container">
+
+    <div class="footer_column">
+      <h3>ONLINE SHOPPING</h3>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Kids</a>
+      <a href="#">Home & Living</a>
+      <a href="#">Beauty</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Myntra Insider</a>
+    </div>
+
+    <div class="footer_column">
+      <h3>CUSTOMER POLICIES</h3>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQ</a>
+      <a href="#">T&C</a>
+      <a href="#">Terms Of Use</a>
+      <a href="#">Track Orders</a>
+      <a href="#">Shipping</a>
+      <a href="#">Cancellation</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Grievance Officer</a>
+    </div>
+
+    <div class="footer_column">
+      <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+      <img src="images/play.png" alt="Google Play" style="width:120px; margin-right: 10px;">
+      <img src="images/app.jpg" alt="App Store" style="width:120px;">
+      <h3 style="margin-top: 20px;">KEEP IN TOUCH</h3>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="20" style="margin-right: 10px;" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="20" style="margin-right: 10px;" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="20" alt="Twitter"></a>
+    </div>
+
+  </div>
+
+  <hr style="margin: 20px 0; border: 1px solid #eaeaec;">
+
+  <div class="copyright" style="text-align: center; padding: 10px 0; font-size: 13px; color: #696b79;">
+    © 2025 www.myntra.com. All rights reserved.
+  </div>
+</footer>
+ 
+  <script>
+  function displayBagIcon() {
+    let bagItems = JSON.parse(localStorage.getItem('bagItems')) || [];
+    document.querySelector('.bag-item-count').innerText = bagItems.length;
+  }
+
+  displayBagIcon();
+</script>
+
+</body>
+</html>
